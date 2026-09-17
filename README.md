@@ -1,31 +1,17 @@
-# Gens Birthday Picnic
+# Mi Cena de Cumpleaños
 
-A pastel birthday picnic invitation with:
-- RSVP form (name + attending)
-- Shared guest list
-- Shared picnic items list
-- Guests can claim existing items
-- Guests can add their own item
-- Data stored in Neon Postgres
-- Invitation image included
+Reemplazo de la invitación de picnic por una invitación de cena familiar en español.
 
-## Event
-- Date: September 14, 2026
-- Time: 6:45 PM
-- Location: Central Park, near 59th St / Columbus Circle
-- Dress code: Pastels
+## Evento
+- Sábado, 19 de septiembre de 2026
+- 8:00 PM
+- La Locanda Pontezuela
+- C. Villa Residencial 8, Santiago, República Dominicana
+- Vestimenta: tonos suaves/pastel
+- No vestir de blanco; la cumpleañera estará vestida de blanco.
 
-## Deploy with Neon + Vercel
+## Base de datos
+Se conserva la tabla `rsvps` del proyecto anterior. El formulario permite actualizar la respuesta de un mismo nombre en vez de crear duplicados.
 
-1. Create a Neon Postgres database.
-2. Run `db.sql` in the Neon SQL Editor.
-3. Put your Neon connection string into `DATABASE_URL`.
-4. Push this folder to GitHub.
-5. Import the repo into Vercel.
-6. Add `DATABASE_URL` to Vercel Project Settings → Environment Variables.
-7. Deploy.
-8. Share the Vercel URL as your invitation link.
-
-The site refreshes shared data every 5 seconds, so RSVP and item changes appear across guests without requiring a manual refresh.
-
-For a custom domain, add one in Vercel after deployment.
+## Vercel
+Mantén `DATABASE_URL` en las Environment Variables del proyecto y despliega normalmente.
